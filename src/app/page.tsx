@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -136,7 +137,7 @@ export default function Home() {
 
         <nav>
           <button onClick={() => setKg(!kg)}>
-            {kg ? "Русский" : "Кыргызча"}
+            {kg ? "Кыргызча" : "Русский"}
           </button>
           <Link href="/admin">{lang.admin}</Link>
         </nav>
@@ -144,9 +145,7 @@ export default function Home() {
 
       <section className="hero">
         <small>● {lang.top}</small>
-
         <h1>{lang.title}</h1>
-
         <p>{lang.subtitle}</p>
 
         <div className="search">
@@ -246,14 +245,7 @@ export default function Home() {
                       <span className="muted">{lang.noWhatsapp}</span>
                     )}
 
-                    <button
-                      onClick={() => favorite(x.id)}
-                      aria-label={
-                        fav.includes(x.id)
-                          ? "Remove from favorites"
-                          : "Add to favorites"
-                      }
-                    >
+                    <button onClick={() => favorite(x.id)}>
                       <Heart
                         fill={
                           fav.includes(x.id) ? "currentColor" : "none"
